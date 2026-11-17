@@ -1,23 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteHeader } from "@/components/site/SiteHeader";
+import { SiteFooter } from "@/components/site/SiteFooter";
+import { Hero } from "@/components/home/Hero";
+import { LiveSection } from "@/components/home/LiveSection";
+import { OpenNowSection } from "@/components/home/OpenNowSection";
+import { GuidesSection } from "@/components/home/GuidesSection";
+import { EventsSection } from "@/components/home/EventsSection";
+import { BusinessSection } from "@/components/home/BusinessSection";
+import { BusinessCta } from "@/components/home/BusinessCta";
 
-// The home route ships no og:image, so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Köpingsvik.se – webbkameror, bad och lokala tips på Öland" },
+      {
+        name: "description",
+        content:
+          "Se stranden live, kolla badtemperaturen, hitta vad som har öppet och planera din dag i Köpingsvik på Öland.",
+      },
+      { property: "og:title", content: "Köpingsvik.se – upplev platsen, året runt" },
+      {
+        property: "og:description",
+        content: "Webbkameror, badväder, öppettider och lokala tips från Köpingsvik på Öland.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen">
+      <SiteHeader />
+      <main>
+        <Hero />
+        <LiveSection />
+        <OpenNowSection />
+        <GuidesSection />
+        <EventsSection />
+        <BusinessSection />
+        <BusinessCta />
+      </main>
+      <SiteFooter />
     </div>
   );
 }

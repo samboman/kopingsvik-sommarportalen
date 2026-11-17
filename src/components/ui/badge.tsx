@@ -14,6 +14,13 @@ const badgeVariants = cva(
         destructive:
           "border-transparent bg-destructive text-destructive-foreground shadow hover:bg-destructive/80",
         outline: "text-foreground",
+        sponsor:
+          "rounded-full border-transparent bg-sponsor text-sponsor-foreground uppercase tracking-wider text-[0.65rem]",
+        live: "rounded-full border-transparent bg-coral text-coral-foreground uppercase tracking-wider text-[0.65rem] gap-1.5",
+        open: "rounded-full border-transparent bg-seagrass/15 text-seagrass gap-1.5",
+        closed: "rounded-full border-transparent bg-muted text-muted-foreground gap-1.5",
+        sand: "rounded-full border-transparent bg-sand text-foreground",
+        glass: "rounded-full border-on-image/30 bg-on-image/15 text-on-image backdrop-blur-md",
       },
     },
     defaultVariants: {
