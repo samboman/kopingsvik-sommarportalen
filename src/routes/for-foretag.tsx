@@ -155,9 +155,11 @@ function ForBusinesses() {
                     </li>
                   ))}
                 </ul>
-                <Button asChild variant="pill" size="xl" className="mt-10">
-                  <a href="mailto:info@kopingsvik.se?subject=Gratis%20basprofil">Skapa gratis profil</a>
-                </Button>
+                <div className="mt-auto pt-10">
+                  <Button asChild variant="pill" size="xl" className="w-full">
+                    <a href="mailto:info@kopingsvik.se?subject=Gratis%20basprofil">Skapa gratis profil</a>
+                  </Button>
+                </div>
               </div>
               <div className="relative flex flex-col overflow-hidden rounded-3xl bg-deep p-8 text-deep-foreground shadow-lift">
                 <div className="absolute -right-20 -top-20 size-60 rounded-full bg-sunset opacity-30 blur-2xl" />
@@ -176,11 +178,11 @@ function ForBusinesses() {
                     </li>
                   ))}
                 </ul>
-                <Button asChild variant="sun" size="xl" className="relative mt-auto translate-y-0 pt-0">
-                  <a href="mailto:info@kopingsvik.se?subject=Ut%C3%B6kad%20profil" className="mt-10">
-                    Prata med oss
-                  </a>
-                </Button>
+                <div className="relative mt-auto pt-10">
+                  <Button asChild variant="sun" size="xl" className="w-full">
+                    <a href="mailto:info@kopingsvik.se?subject=Ut%C3%B6kad%20profil">Prata med oss</a>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

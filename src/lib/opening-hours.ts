@@ -3,7 +3,7 @@ export type DayHours = { open: string; close: string } | null;
 export type WeekHours = [DayHours, DayHours, DayHours, DayHours, DayHours, DayHours, DayHours];
 
 const toMinutes = (hhmm: string) => {
-  const [h, m] = hhmm.split(":").map(Number);
+  const [h = 0, m = 0] = hhmm.split(":").map(Number);
   return h * 60 + m;
 };
 
